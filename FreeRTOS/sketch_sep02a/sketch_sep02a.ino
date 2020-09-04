@@ -35,7 +35,8 @@ void setup() {
   xTaskCreate(TaskPrint,"printer",128,NULL,1,NULL);
   // So we're using 128 word stacks, why use words, they're an inconcsistent unit??
   // TODO: figure out how to figure out how much is actually needed for a stack rather than using arbitrary width
-
+  // https://stackoverflow.com/questions/44434620/calculation-of-stack-size-in-freertos-or-ti-rtos
+  // links on this page link to useful docucmentation
   vTaskStartScheduler();
 }
 
@@ -47,7 +48,7 @@ void loop() {
 
 void TaskBlink1(void *pvParamaters){
   pinMode(8, OUTPUT);
-  while(1) { // TODO: why is an infinite loopused? isn't the task called when it's scheduled?
+  while(1) { 
     digitalWrite(8,HIGH);
     Serial.println("blink1");
     vTaskDelay(200/portTICK_PERIOD_MS);
@@ -58,7 +59,7 @@ void TaskBlink1(void *pvParamaters){
 }
 void TaskBlink2(void *pvParamaters){
   pinMode(7, OUTPUT);
-  while(1) { // TODO: why is an infinite loopused? isn't the task called when it's scheduled?
+  while(1) { 
     digitalWrite(7,HIGH);
     Serial.println("blink2");
     vTaskDelay(210/portTICK_PERIOD_MS);
@@ -68,7 +69,7 @@ void TaskBlink2(void *pvParamaters){
   }
 }
 void TaskPrint(void *pvParameters){
-  int counter = 0; // Why isn't this initialised above?
+  int counter = 0; 
   while (1) {
     counter++;
     Serial.println(counter);
@@ -84,5 +85,5 @@ void TaskPrint(void *pvParameters){
  * the scheduler has a list of tasks that "are running"
  * on each tick the scheduler is decidnig what order to run the tasks that "are running"
  * If that while loop ends, then there's no need to reschedule the task on the next tick
- * TODO: actually look in to this and edit notes/comments here 
+ * https://stackoverflow.com/questions/28958389/why-do-rtos-tasks-have-to-be-executed-in-infinite-loop
  */
