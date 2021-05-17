@@ -1,4 +1,4 @@
-// Testing out using 3x CD4051BE Demultiplexer ICs
+  // Testing out using 3x CD4051BE Demultiplexer ICs
 
 String leds[8] = {"000","001","010","011","100","101","110","111"};
 int controlPins[3] = {4,3,2}; // Connect to C,B,A in order
@@ -46,6 +46,8 @@ void loop() {
   counter = (counter + 1);
 }
 
+// For each demux, loops through each LED attached to it
+// (so end up with 3 LEDs on at a time)
 void setLED(int i, int state){
   //for (char const &c: leds[i]) {
   String led = leds[i];
@@ -66,6 +68,8 @@ void setLED(int i, int state){
   digitalWrite(sig3,HIGH);
 }
 
+// Loops through each LED and puts them on in order
+// So have one LED on at a time
 void setLED2(int ledN, int state){
   // there's gonna be a better way to do this but this is what I'm going with for now
   int i = ledN%8;
