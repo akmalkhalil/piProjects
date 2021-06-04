@@ -1,0 +1,30 @@
+Controller Fullname," Performance Designed Products Rock Candy Wired Controller for Nintendo Switch",,,
+controll button,"event code",event type," event value press",event value release
+dpad up,,,,
+dpad down,,,,
+dpad right,,,,
+dpad left,,,,
+west button,"304",'BTN_A';'BTN_GAMEPAD';'BTN_SOUTH',down,up
+south button,"305",'BTN_B'; 'BTN_EAST',down,up
+east button,"306",BTN_C,down,up
+north button,"307",'BTN_NORTH'; 'BTN_X',down,up
+left trigger,"310",BTN_TL,down,up
+left bumper,"308",'BTN_WEST'; 'BTN_Y',down,up
+right trigger,"311",BTN_TR,down,up
+right bumper,"309",BTN_Z,down,up
+weird square/circle thing,"317",BTN_THUMBL,down,up
+home button,"316",BTN_MODE,down,up
+- button,"312",BTN_TL2,down,up
++ button,"313",BTN_TR2,down,up
+left analog up,,,,
+left analog down,,,,
+left analog right,,,,
+left analog left,,,,
+left stick," ",,,
+right analog up,,,,
+right analog down,,,,
+right analog rught,,,,
+right analog left,,,,
+right stick,,,,
+,,,,
+,,,,
