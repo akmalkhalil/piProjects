@@ -56,6 +56,27 @@ def rockCandyQuickTestPrint():
                     print("X")
 
 
+def printAnalogUD():
+    lStickUD = 1
+    rStickUD = 5
+    for event in gamepad.read_loop():
+        if event.type == ecodes.EV_ABS:
+            if event.code == lStickUD:
+                print("Left stick: ", event.value)
+            elif event.code == rStickUD:
+                print("Right stick: ", event.value)
+
+def printAnalogLR():
+    lStickLR = 0
+    rStickLR = 2
+    for event in gamepad.read_loop():
+        if event.type == ecodes.EV_ABS:
+            if event.code == lStickLR:
+                print("Left stick: ", event.value)
+            elif event.code == rStickLR:
+                print("Right stick: ", event.value)
+
+
 from gpiozero import LED
 
 def rockCandyLEDs():
@@ -120,6 +141,8 @@ if __name__ == "__main__":
     print("3 for rock candy controller and LEDs")
     print("4 for print absolute ecode type events")
     print("5 for rock candy dpad test")
+    print("6 to test up/down values of each joystick")
+    print("7 to test left/right values of each joystick")
     choice = input()
     if choice == "0":
         printButtons()
@@ -133,5 +156,8 @@ if __name__ == "__main__":
         printEventAbs()
     elif choice == "5":
         rockCandyPrintDPad()
-
+    elif choice == "6":
+        printAnalogUD()
+    elif choice == "7":
+        printAnalogLR()
 

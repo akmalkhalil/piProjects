@@ -16,15 +16,15 @@ weird square/circle thing,"317",BTN_THUMBL,EV_KEY,down,up
 home button,"316",BTN_MODE,EV_KEY,down,up
 - button,"312",BTN_TL2,EV_KEY,down,up
 + button,"313",BTN_TR2,EV_KEY,down,up
-left analog up,"00/ABS_X",03,EV_ABS,,
-left analog down,"00/ABS_X",03,EV_ABS,,
-left analog right,"01/ ABS_Y",03,EV_ABS,,
-left analog left,"01/ ABS_Y",03,EV_ABS,,
+left analog up,"01",03,EV_ABS,0,128
+left analog down,"01",03,EV_ABS,255,128
+left analog right,"00",03,EV_ABS,255,128
+left analog left,"00",03,EV_ABS,0,128
 left stick,"314",01,EV_KEY,01,0
-right analog up,"ABS_Z",03,EV_ABS,,
-right analog down,"ABS_Z",03,EV_ABS,,
-right analog rught,"ABS_RZ",03,EV_ABS,,
-right analog left,"ABS_RZ",03,EV_ABS,,
+right analog up,"ABS_Z/05",03,EV_ABS,0,128
+right analog down,"ABS_Z/05",03,EV_ABS,255,128
+right analog rught,"ABS_RZ/02",03,EV_ABS,,128
+right analog left,"ABS_RZ/02",03,EV_ABS,0,128
 right stick,"315",01,EV_KEY,01,0
 ,,,,,
 ,,,,,
