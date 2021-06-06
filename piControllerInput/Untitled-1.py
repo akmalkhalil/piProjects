@@ -30,6 +30,12 @@ def printEventKey():
         if event.type == ecodes.EV_KEY:
             print(event)
 
+def printEventAbs():
+    print(gamepad)
+    for event in gamepad.read_loop():
+        if event.type == ecodes.EV_ABS:
+            print(event)
+
 def rockCandyQuickTestPrint():
     print(gamepad)
     ybtn = 304
@@ -87,11 +93,33 @@ def rockCandyLEDs():
                 ledUp.off()
 
 
+def rockCandyPrintDPad():
+    # event codes for buttons. Vars are named st the first char is -1 and the second is +1
+    ud = 17
+    lr = 16
+
+    for event in gamepad.read_loop():
+        if event.type == ecodes.EV_ABS:
+            if event.code == ud:
+                if event.value == -1:
+                    print("Up")
+                elif event.value == 1:
+                    print("Down")
+            elif event.code == lr:
+                if event.value == -1:
+                    print("Left")
+                elif event.value == 1:
+                    print("Right")
+            
+
+
 if __name__ == "__main__":
     print("0 for print all button presses")
-    print("1 for print EV_KEY button presses")
+    print("1 for print key ecode type button presses")
     print("2 for ybax test for Rock Candy Controller")
     print("3 for rock candy controller and LEDs")
+    print("4 for print absolute ecode type events")
+    print("5 for rock candy dpad test")
     choice = input()
     if choice == "0":
         printButtons()
@@ -99,3 +127,11 @@ if __name__ == "__main__":
         printEventKey()
     elif choice == "2":
         rockCandyQuickTestPrint()
+    elif choice == "3":
+        rockCandyLEDs()
+    elif choice == "4":
+        printEventAbs()
+    elif choice == "5":
+        rockCandyPrintDPad()
+
+

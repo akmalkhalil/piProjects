@@ -1,30 +1,30 @@
-Controller Fullname," Performance Designed Products Rock Candy Wired Controller for Nintendo Switch",,,
-controll button,"event code",event type," event value press",event value release
-dpad up,,,,
-dpad down,,,,
-dpad right,,,,
-dpad left,,,,
-west button,"304",'BTN_A';'BTN_GAMEPAD';'BTN_SOUTH',down,up
-south button,"305",'BTN_B'; 'BTN_EAST',down,up
-east button,"306",BTN_C,down,up
-north button,"307",'BTN_NORTH'; 'BTN_X',down,up
-left trigger,"310",BTN_TL,down,up
-left bumper,"308",'BTN_WEST'; 'BTN_Y',down,up
-right trigger,"311",BTN_TR,down,up
-right bumper,"309",BTN_Z,down,up
-weird square/circle thing,"317",BTN_THUMBL,down,up
-home button,"316",BTN_MODE,down,up
-- button,"312",BTN_TL2,down,up
-+ button,"313",BTN_TR2,down,up
-left analog up,,,,
-left analog down,,,,
-left analog right,,,,
-left analog left,,,,
-left stick," ",,,
-right analog up,,,,
-right analog down,,,,
-right analog rught,,,,
-right analog left,,,,
-right stick,,,,
-,,,,
-,,,,
+Controller Fullname," Performance Designed Products Rock Candy Wired Controller for Nintendo Switch",,,,
+controll button,"event code",event type,ecodes type," event value press",event value release
+dpad up,"17",03,EV_ABS,-1,0
+dpad down,"17",03,EV_ABS,1,0
+dpad right,"16",03,EV_ABS,1,0
+dpad left,"16",03,EV_ABS,-1,0
+west button,"304",'BTN_A';'BTN_GAMEPAD';'BTN_SOUTH',EV_KEY,down,up
+south button,"305",'BTN_B'; 'BTN_EAST',EV_KEY,down,up
+east button,"306",BTN_C,EV_KEY,down,up
+north button,"307",'BTN_NORTH'; 'BTN_X',EV_KEY,down,up
+left trigger,"310",BTN_TL,EV_KEY,down,up
+left bumper,"308",'BTN_WEST'; 'BTN_Y',EV_KEY,down,up
+right trigger,"311",BTN_TR,EV_KEY,down,up
+right bumper,"309",BTN_Z,EV_KEY,down,up
+weird square/circle thing,"317",BTN_THUMBL,EV_KEY,down,up
+home button,"316",BTN_MODE,EV_KEY,down,up
+- button,"312",BTN_TL2,EV_KEY,down,up
++ button,"313",BTN_TR2,EV_KEY,down,up
+left analog up,"00/ABS_X",03,EV_ABS,,
+left analog down,"00/ABS_X",03,EV_ABS,,
+left analog right,"01/ ABS_Y",03,EV_ABS,,
+left analog left,"01/ ABS_Y",03,EV_ABS,,
+left stick,"314",01,EV_KEY,01,0
+right analog up,"ABS_Z",03,EV_ABS,,
+right analog down,"ABS_Z",03,EV_ABS,,
+right analog rught,"ABS_RZ",03,EV_ABS,,
+right analog left,"ABS_RZ",03,EV_ABS,,
+right stick,"315",01,EV_KEY,01,0
+,,,,,
+,,,,,
